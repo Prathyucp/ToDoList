@@ -1,0 +1,75 @@
+
+.completeButtonStyle{
+    font-weight: 1000;
+    font-size: 100%;
+    margin: 4px 0;
+    text-align: center;
+    color:#ff69b4;
+    
+    background-color: white;
+    border-color:  #ff69b4;;
+}
+.removeButton{
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align:right;
+}
+.editButton{
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align:right;
+  }
+
+.container{
+    background-color:  #ff5858;
+    -webkit-box-shadow: 2px 2px 10px 2px #aaa;
+    box-shadow: 2px 2px 10px 2px #f857a6;
+    padding: 5%;
+    text-align: center;
+    margin-bottom: 1.5em;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 700%;
+    height: 120%;
+    position: relative;
+}
+.App__contacts {
+    margin: 2em;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content:space-between;
+    
+}
+.form_container{
+    background-color: #fff;
+    -webkit-box-shadow: 2px 2px 10px 2px #aaa;
+    box-shadow: 2px 2px 10px 2px #aaa;
+    padding: 5%;
+    
+    margin-bottom: 1.5em;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 30%;
+    position: relative;
+}
+.subtitle{
+    font-weight: 600;
+    font-size: 140%;
+    margin: 4px 0;
+    text-align: center;
+}
+.completedTask{
+    text-decoration:line-through;
+    
+}

@@ -1,0 +1,12 @@
+.addButtonStyle{
+    width: 400px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    background-color: #f357a3;
+}
+.inputTodoStyle{
+    width: 400px;
+    height: 40px;
+    
+}

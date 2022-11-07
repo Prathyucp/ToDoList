@@ -1,0 +1,30 @@
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<table >
+    <tr>
+        <td [width]="850">
+            
+                <ol><li value="{{myToDo.index}}">
+                    <button (click)="completeToDo(myToDo)" *ngIf="!myToDo.completed" class="completeButtonStyle">Complete</button>
+                    &nbsp;&nbsp;
+                    <label *ngIf="(!myToDo.completed && !myToDo.editable)" >{{myToDo.task}}</label>
+                    <input type="text" *ngIf="(!myToDo.completed && myToDo.editable)" value="{{myToDo.task}}" [(ngModel)]="myToDo.task" 
+                        id="edited" name="edited"/>
+                    <label *ngIf="myToDo.completed" class="completedTask">{{myToDo.task}}</label>
+                </li></ol>
+                  
+            
+        </td>
+        <td align="right" [width]="50" *ngIf="(!myToDo.completed && !myToDo.editable)">
+            <button (click)="editToDo(myToDo)" class="editButton"> <i class="fa fa-edit"></i></button>
+        </td>
+        <td align="right" [width]="50" *ngIf="(!myToDo.completed && myToDo.editable)">
+            <button (click)="updateToDo(myToDo)" class="editButton"> <i class="fa fa-check"></i></button>
+        </td>
+        <td align="right" [width]="50">
+            <button (click)="removeToDO(myToDo)" class="removeButton"> <i class="fa fa-close"></i></button>
+        </td>
+    </tr>
+</table>

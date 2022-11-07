@@ -1,0 +1,21 @@
+
+ <div class="containerP">
+    <div style="font-size:3ch">{{title}}</div>
+    <div style="font-size:2ch">{{subtitle}}</div>
+    <div *ngIf="listEmpty ">
+        <div style="font-size:2ch">{{message}}</div>
+    </div>
+    <div *ngIf="!listEmpty">
+        <input type="text" id="filter" name="filter" [(ngModel)]="searchTerm" 
+        value="{{searchTerm}}"  />
+        <button (click)="filterDataByTag(searchTerm)"><i class="fa fa-search"></i></button>
+        <app-todo-item *ngFor="let t of myToDos" 
+        [myToDo]="t" (remove)="removeToDo($event)" (complete)="completeToDo($event)" (edit)="editToDo($event)"  
+        (update)="UpdateToDo($event)"
+        >
+    </app-todo-item>
+    </div><br><br>
+    <app-todo-form (addedToDO)="addToDo($event)"></app-todo-form>
+   
+    
+ </div> 
