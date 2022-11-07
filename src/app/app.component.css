@@ -1,0 +1,14 @@
+.container{
+    background-color:  #f38fbf;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); 
+    padding: 5%;
+    margin-bottom: 1.5em;
+    box-sizing: border-box;
+    width: 40%;
+    height: 150%;
+    position: relative;
+    border:#f857a6;
+    Font-family: Open Sans; 
+    Font-weight: 300; 
+
+}
