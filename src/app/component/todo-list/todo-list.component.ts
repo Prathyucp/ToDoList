@@ -37,6 +37,9 @@ export class TodoListComponent implements OnInit {
     let length = 0;
     length = this.myToDos.length;
     newToDo.index=length+1;
+    newToDo.completed = false;
+    newToDo.editable = false;
+    newToDo.delete = false;
     this.myToDos.push(newToDo);
     this.evaluate();
   }

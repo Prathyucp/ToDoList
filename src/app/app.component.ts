@@ -19,7 +19,7 @@ export class AppComponent {
     },
     {
       task:"Prepare Dinner",
-      completed:true,
+      completed:false,
       delete:false,
       index:2,
       editable:false
@@ -33,17 +33,11 @@ export class AppComponent {
     }
   ];
 
-  filterDataByTag(searchTerm:string) {
-    searchTerm = "fold";
-    let newTodos:ToDoItem[] =[{ }]as ToDoItem[];
-    // filter the data array, based on some condition
-    this.myToDoList =  this.myToDoList.filter(item => {
- 
-       return item.task.includes(searchTerm);
-    });
-    searchTerm = searchTerm.toLowerCase();
-    this.myToDoList = 
-    this.myToDoList = newTodos;
+  filterDataByTag(searchTerm:string):void {
+    
+    
+    this.myToDoList =   this.myToDoList.filter((el) => el.task.toLowerCase().includes(searchTerm.toLowerCase()));
+    
     
   }
   

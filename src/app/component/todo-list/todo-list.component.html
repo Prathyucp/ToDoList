@@ -6,14 +6,19 @@
         <div style="font-size:2ch">{{message}}</div>
     </div>
     <div *ngIf="!listEmpty">
-        <input type="text" id="filter" name="filter" [(ngModel)]="searchTerm" 
-        value="{{searchTerm}}"  />
+        <input type="text" id="filter" name="filter" [(ngModel)]="searchTerm"  size="50" 
+        onchange="filterDataByTag(searchTerm)"
+          />
         <button (click)="filterDataByTag(searchTerm)"><i class="fa fa-search"></i></button>
-        <app-todo-item *ngFor="let t of myToDos" 
-        [myToDo]="t" (remove)="removeToDo($event)" (complete)="completeToDo($event)" (edit)="editToDo($event)"  
-        (update)="UpdateToDo($event)"
-        >
-    </app-todo-item>
+        <div *ngFor="let t of myToDos; let i =index">
+            <ol><li value="{{i+1}}">
+                <app-todo-item  
+                [myToDo]="t" (remove)="removeToDo($event)" (complete)="completeToDo($event)" (edit)="editToDo($event)"  
+                (update)="UpdateToDo($event)" >
+            </app-todo-item>
+            </li></ol>
+        </div>
+        
     </div><br><br>
     <app-todo-form (addedToDO)="addToDo($event)"></app-todo-form>
    
